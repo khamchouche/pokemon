@@ -21,18 +21,18 @@ class PokemonTest {
         //WHEN
         boolean vainqueur=pokemon1.estVainqueurContre(pokemon2);
         //ASSERT THEN
-        assertThat(vainqueur).isEqualTo(pokemon2);
+        assertThat(vainqueur).isTrue();
     }
 
     @Test
     void pokemon2_gagne_grace_a_son_attaque_plus_puissante(){
         //GIVEN
         Pokemon pokemon1 = new Pokemon( "imane",null , new Stats(10, 10));
-        Pokemon pokemon2 = new Pokemon( "badr",null , new Stats(9, 0));
+        Pokemon pokemon2 = new Pokemon( "badr",null , new Stats(11, 0));
         //WHEN
         boolean vainqueur=pokemon2.estVainqueurContre(pokemon1);
         //ASSERT THEN
-        assertThat(vainqueur).isEqualTo(pokemon1);
+        assertThat(vainqueur).isTrue();
     }
 
 }
